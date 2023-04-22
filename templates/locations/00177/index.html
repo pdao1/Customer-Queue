@@ -208,6 +208,11 @@ var firstName = document.getElementById('')
 		$('#queueUp').removeAttr('disabled')
 	}
 			})
+
+	// grabbing the location code to append to db entries / pull db entries and identify different locations
+	uriLength = location.href.length;
+	uriSlice = location.href.slice(uriLength - 5, uriLength)
+
 </script>
   </body>
 </html>
