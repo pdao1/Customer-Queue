@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+		<link href="./style.css" rel="stylesheet">
+    <title>Running Successfull</title>
+  </head>
+	<style>
+		.container-fluid {
+	background-color: #fff;
+}
+		#slides {
+			height: 100vh;
+			width: 100vw;
+		}
+		.carousel-inner {
+			position: absolute;
+			top: 30%;
+			text-align: center;
+		}
+		.carousel-item {
+			height: 600px;
+		}
+		.buttons-group {
+			top: 90%;
+		}
+		.form-floating {
+			width: auto;
+			margin-left: 10px;
+		}
+		button, a {
+			width: 220px;
+		}
+		label.btn.btn-outline-success {
+		  width: 100%;
+    min-width: 100px;
+}
+		}
+		.container-fluid.mt-5.pt-5 {
+		position: absolute;
+   top: 50%;
+		}
+
+	</style>
+  <body>			
+	<div class="container-fluid">
+		<div class="container text-center pt-3">
+			<p>The time is <strong><span id="clock"></span></strong> and there are <strong>2</strong> people in front of you.</p>
+		</div>
+	<div id="slides" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+		<h1>Aloha 👋 Choose your branch location</h1>
+<div class="container text-center mt-5">
+		<div class="form-floating">
+<select class="form-select" id="branchSelect" aria-label="Floating label select example">
+<option value="" selected disabled></option>
+<option value="00177">00177 Main Banking Center</option>
+<option value="00200">00200 Dededo Branch</option>
+<option value="00300">00300 Maite Banking Center</option>
+<option value="00350">00350 EOS-MPC Maite</option>
+<option value="00400">00400 Kamuela Branch</option>
+<option value="00500">00500 Makiki Banking Center</option>
+<option value="00700">00700 Lahaina Branch</option>
+<option value="00900">00900 Kapahulu Branch</option>
+<option value="01000">01000 Hawaii Kai Branch</option>
+<option value="01200">01200 Oleai Branch</option>
+<option value="01325">01325 Corporate Banking Division</option>
+<option value="01700">01700 Gualo Rai Branch</option>
+<option value="02000">02000 Hilo Branch</option>
+<option value="02050">02050 Pahoa Branch</option>
+<option value="02100">02100 Kahului Banking Center</option>
+<option value="02200">02200 Kealakekua Branch</option>
+<option value="02300">02300 Koloa Branch</option>
+<option value="02400">02400 Lanai Branch</option>
+<option value="02600">02600 Haleiwa Branch</option>
+<option value="02700">02700 Wailuku Branch</option>
+<option value="02800">02800 Waimea Branch</option>
+<option value="03000">03000 Lihue Banking Center</option>
+<option value="03100">03100 Waikiki Banking Center</option>
+<option value="03200">03200 Kaimuki Branch</option>
+<option value="03500">03500 Tamuning Branch</option>
+<option value="03600">03600 Kailua Banking Center</option>
+<option value="03800">03800 Kahuku Branch</option>
+<option value="03900">03900 Wahiawa Branch</option>
+<option value="04000">04000 EOS-Commercial Loan Center</option>
+<option value="04100">04100 Pukalani Branch</option>
+<option value="04200">04200 Mililani Banking Center</option>
+<option value="04400">04400 Manoa Branch</option>
+<option value="04500">04500 Kahala Banking Center</option>
+<option value="04800">04800 University Banking Center</option>
+<option value="04900">04900 Kalihi Banking Center</option>
+<option value="05100">05100 Kapaa Branch</option>
+<option value="05300">05300 Kapolei Branch</option>
+<option value="05600">05600 Liliha Branch</option>
+<option value="05800">05800 Kahana Branch</option>
+<option value="05900">05900 Waipahu Banking Center</option>
+<option value="06100">06100 FHB Direct</option>
+<option value="06500">06500 Kapiolani Banking Center</option>
+<option value="06600">06600 Kaneohe Branch</option>
+<option value="06700">06700 Kona Banking Center</option>
+<option value="06800">06800 Waikoloa Branch</option>
+<option value="06900">06900 Kaneohe Bay Branch</option>
+<option value="07100">07100 Hawaii Dealer Div - Indirect</option>
+<option value="07120">07120 Western Region Dealer Center</option>
+<option value="07140">07140 Dealer Division</option>
+<option value="07300">07300 Commercial Real Estate Div</option>
+<option value="07800">07800 Ewa Beach Branch</option>
+<option value="07900">07900 Aina Haina Banking Center</option>
+<option value="08100">08100 Pearlridge Banking Center</option>
+<option value="08200">08200 Kihei Branch</option>
+<option value="08300">08300 Pearl City Branch</option>
+<option value="08400">08400 Princeville Branch</option>
+<option value="08600">08600 Waianae Branch</option>
+<option value="09000">09000 Waiakea Banking Center</option>
+<option value="09500">09500 EOS-Money Processing Center</option>
+<option value="09520">09520 EOS-MPC Hilo</option>
+<option value="09521">09521 EOS-MPC Kahului</option>
+<option value="09530">09530 EOS-MPC Lihue</option>
+<option value="09567">09567 EOS-MPC Kona</option>
+<option value="09700">09700 Guam - Dealer Center</option>
+<option value="09800">09800 Moanalua Banking Center</option>
+</select>
+	  <label for="floatingSelect">Branch locations</label>		
+		</div>
+		</div>
+<div class="container-fluid mt-5 pt-5">
+<div class="d-flex justify-content-around">
+  <a class="btn btn-primary px-4 ms-5 mx-5" type="button" id="chooseBranch" href="">Go</a>
+</div>
+		</div>
+	</div>
+<!-- Modal -->
+    </div>
+  </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script>
+$('#nextSlide').click(function(){
+	var name = $('#firstName').val()
+$('span#nameFields').text(name)
+})
+
+$('#modalAcknowledge').click(function(){
+location.reload(true)
+})
+
+	// Live clock
+
+	function showClock() {
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  let meridiem = "AM";
+  
+  // Convert to 12-hour format and determine meridiem
+  if (hours > 12) {
+    hours -= 12;
+    meridiem = "PM";
+  }
+  
+  // Add leading zeros to minutes and seconds if necessary
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+  
+  // Combine the time elements into a string
+  let timeString = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+  
+  // Update the HTML element with the current time
+  document.getElementById("clock").innerHTML = timeString;
+  
+  // Call this function again after 1 second
+  setTimeout(showClock, 1000);
+}
+
+// Call the showClock function to start the clock
+showClock();
+
+$('#chooseBranch').click(function(){
+	branchNumber = 	$('#branchSelect').val()
+	branchUrl = `/locations/${branchNumber}`
+	$('#chooseBranch').attr('href', branchUrl)
+})
+
+</script>
+  </body>
+</html>
