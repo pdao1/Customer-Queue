@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path');
+const mongoose = require('mongoose');
+const CustomerQueue = require('./models/CustomerQueue');
+
 
 
 // Render Html File
@@ -9,6 +12,8 @@ const path = require('path');
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'templates/index.html'));
 });
+
+mongoose.connect(`mongodb+srv://fhb:phung123@fhbdev.c3d6xha.mongodb.net/?retryWrites=true&w=majority`)
 
 // Branch Routings
 
@@ -130,3 +135,4 @@ app.get('/locations/04000', function(req,res) {
 app.listen(port, () => {
   // Code.....
 })
+

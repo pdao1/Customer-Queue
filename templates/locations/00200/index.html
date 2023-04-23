@@ -208,6 +208,11 @@ var firstName = document.getElementById('')
 		$('#queueUp').removeAttr('disabled')
 	}
 			})
+	
+	uriLength = location.href.length;
+	uriSlice = location.href.slice(uriLength - 5, uriLength)
+	let el = document.querySelector("#locationId");
+	el.dataset.id  = uriSlice
 </script>
   </body>
 </html>
