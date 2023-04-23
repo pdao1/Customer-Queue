@@ -42,7 +42,9 @@
 		position: absolute;
    top: 50%;
 		}
-
+#locationId {
+	display: none;
+}
 	</style>
   <body>
 	<div class="container-fluid">
@@ -56,9 +58,10 @@
 		<div class="container text-center">
 		<div class="row flex-row" style="margin-left: 28%;margin-right: 28%;">
 				<div class="form-floating mb-1 mt-5">
-  <input type="text" class="form-control col px-2 text-center" id="firstName" placeholder="First Name" style="width: 270px">
+  <input type="text" class="form-control col px-2 text-center" id="firstName" placeholder="First Name" name="firstNamestyle="width: 270px">
 	<label for="firstName" class="text-center" required>First Name</label>
 				</div>
+			<div id="locationId" name="locationId" data-id></div>
 						<div class="form-floating mb-1 mt-5">
 	<input type="text" class="form-control col px-2 text-center" id="lastName" placeholder="Last Name" style="width: 200px;" maxlength="1">
   <label for="lastName" class="text-center">Last Initial</label>
@@ -208,7 +211,8 @@ var firstName = document.getElementById('')
 		$('#queueUp').removeAttr('disabled')
 	}
 			})
-	
+
+	// grabbing the location code to append to db entries / pull db entries and identify different locations
 	uriLength = location.href.length;
 	uriSlice = location.href.slice(uriLength - 5, uriLength)
 	let el = document.querySelector("#locationId");
