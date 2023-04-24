@@ -4,7 +4,7 @@ const port = 3000
 const path = require('path');
 const mongoose = require('mongoose');
 const CustomerQueue = require('./models/CustomerQueue');
-
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
 
 // Render Html File
@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'templates/index.html'));
 });
 
-mongoose.connect(`mongodb+srv://fhb:phung123@fhbdev.c3d6xha.mongodb.net/?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://fhb:phung123@fhbdev.c3d6xha.mongodb.net/FHBDev`)
 
 // Branch Routings
 
@@ -136,3 +136,37 @@ app.listen(port, () => {
   // Code.....
 })
 
+
+// Form Submission Route
+app.post('/submit', async (req, res) => {
+
+	var formData = req.body;
+	var timestamp = new Date().toLocaleString()
+	formData.timestamp = timestamp;
+	formData.status = status;
+	var fullname = req.body.FirstName + ' ' + req.body.LastName
+	var serviceOptions = document.getElementsByName("services");
+	var selected = [];
+
+	for (var i = 0; i < serviceOptions.length; i++) {
+  if (serviceOptions[i].checked) {
+    selected.push(serviceOptions[i].value);
+  }
+}
+
+console.log("Selected checkboxes: " + selected.join(", "));
+
+	const AddToQueue = new CustomerQueue({
+	location: formData.locationId,
+	name: formData.fullname,
+	services: formData.selected,
+	time: formData.timestamp,
+	});
+
+	try {
+		await AddToQueue.save();
+		res.redirect('/confirmation');
+	} catch (err) {
+		res.status(400).send(err);
+	}
+});
